@@ -13,12 +13,15 @@ public class Movement : MonoBehaviour
     float inputHorizontal;
     [SerializeField] float rotation = 5f;
     [SerializeField] float maxSpeed = 10f;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.interpolation = RigidbodyInterpolation.Interpolate;
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -50,9 +53,18 @@ public class Movement : MonoBehaviour
             {
                 rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
             }
+            if (!audioSource.isPlaying)
+            { 
+                audioSource.Play();
+            }
+        }
+        else
+        {
+
+            audioSource.Stop();
         }
         if (isAPressed || isDPressed)
-        { 
+        {
             rb.MoveRotation(rb.rotation * Quaternion.Euler(new Vector3(0, 0, (-1f * inputHorizontal * rotation * Time.fixedDeltaTime))));
         }
     }

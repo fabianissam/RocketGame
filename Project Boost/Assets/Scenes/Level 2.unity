@@ -632,6 +632,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 408322933604977755, guid: 849ec3845e0a3a54785e1247ded31087, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ddab6b9292ab897498ea1a91726a34ac, type: 2}
     - target: {fileID: 1773227626600475848, guid: 849ec3845e0a3a54785e1247ded31087, type: 3}
       propertyPath: m_Name
       value: Obstacle
@@ -641,12 +645,20 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2159915363298837545, guid: 849ec3845e0a3a54785e1247ded31087, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.3508
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159915363298837545, guid: 849ec3845e0a3a54785e1247ded31087, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8.6608
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159915363298837545, guid: 849ec3845e0a3a54785e1247ded31087, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.42
       objectReference: {fileID: 0}
     - target: {fileID: 2159915363298837545, guid: 849ec3845e0a3a54785e1247ded31087, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.89
+      value: 13.47
       objectReference: {fileID: 0}
     - target: {fileID: 2159915363298837545, guid: 849ec3845e0a3a54785e1247ded31087, type: 3}
       propertyPath: m_LocalPosition.z
