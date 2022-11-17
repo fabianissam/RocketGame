@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
     }
 
     // Update is called once per frame
@@ -50,6 +51,9 @@ public class Movement : MonoBehaviour
                 rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
             }
         }
-        rb.MoveRotation(rb.rotation * Quaternion.Euler(new Vector3(0, 0, (-1 * inputHorizontal * rotation * Time.fixedDeltaTime))));
+        if (isAPressed || isDPressed)
+        { 
+            rb.MoveRotation(rb.rotation * Quaternion.Euler(new Vector3(0, 0, (-1f * inputHorizontal * rotation * Time.fixedDeltaTime))));
+        }
     }
 }
